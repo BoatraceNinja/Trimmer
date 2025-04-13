@@ -74,7 +74,7 @@ final class TrimmerTest extends TestCase
     /**
      * @return void
      */
-    public function testException(): void
+    public function testThrowsExceptionWhenMethodDoesNotExist(): void
     {
         $this->expectException(BadMethodCallException::class);
         $this->expectExceptionMessage(
