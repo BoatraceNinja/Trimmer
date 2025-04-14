@@ -91,9 +91,9 @@ final class TrimmerCoreTest extends TestCase
     {
         $this->expectException(BadMethodCallException::class);
         $this->expectExceptionMessage(
-            'Call to undefined method \'Boatrace\Ninja\Trimmer\TrimmerCore::invalid()\'.'
+            'Call to undefined method \'Boatrace\Ninja\Trimmer\TrimmerCore::ghost()\'.'
         );
 
-        $this->trimmer->invalid();
+        $this->trimmer->ghost();
     }
 }
