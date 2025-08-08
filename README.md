@@ -1,6 +1,6 @@
 # Boatrace Ninja Trimmer
 
-[![Tests](https://github.com/BoatraceNinja/Trimmer/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/BoatraceNinja/Trimmer/actions/workflows/tests.yml)
+[![tests](https://github.com/BoatraceNinja/Trimmer/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/BoatraceNinja/Trimmer/actions/workflows/tests.yml)
 [![PHP Version Require](https://poser.pugx.org/boatrace/trimmer/require/php)](https://packagist.org/packages/boatrace/trimmer)
 [![Latest Stable Version](https://poser.pugx.org/boatrace/trimmer/v/stable)](https://packagist.org/packages/boatrace/trimmer)
 [![Latest Unstable Version](https://poser.pugx.org/boatrace/trimmer/v/unstable)](https://packagist.org/packages/boatrace/trimmer)
