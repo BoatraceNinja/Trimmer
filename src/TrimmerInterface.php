@@ -7,4 +7,7 @@ namespace Boatrace\Ninja\Trimmer;
 /**
  * @author shimomo
  */
-interface TrimmerInterface extends TrimmerContractInterface {}
+interface TrimmerInterface extends TrimmerContractInterface
+{
+    //
+}

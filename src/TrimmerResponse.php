@@ -13,7 +13,10 @@ final class TrimmerResponse implements TrimmerResponseInterface
      * @param  string|null  $value
      * @return void
      */
-    public function __construct(private readonly ?string $value = null) {}
+    public function __construct(private readonly ?string $value = null)
+    {
+        //
+    }
 
     /**
      * @return string|null
