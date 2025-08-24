@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Boatrace Ninja">
+    <rule ref="PSR12"/>
+
+    <file>config</file>
+    <file>src</file>
+    <file>tests</file>
+</ruleset>
