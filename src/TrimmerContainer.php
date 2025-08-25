@@ -32,6 +32,7 @@ final class TrimmerContainer implements TrimmerContainerInterface
     public static function getInstance(string $name): TrimmerContractInterface
     {
         $instance = self::getContainer()->get($name);
+
         if (!$instance instanceof TrimmerContractInterface) {
             throw new RuntimeException(
                 'Service \'' . $name . '\' must implement TrimmerContractInterface.'
