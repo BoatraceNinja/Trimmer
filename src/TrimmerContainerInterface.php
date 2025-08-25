@@ -12,7 +12,7 @@ use DI\Container;
 interface TrimmerContainerInterface extends TrimmerContractInterface
 {
     /**
-     * @param  string  $name
+     * @param  non-empty-string  $name
      * @return \Boatrace\Ninja\Trimmer\TrimmerContractInterface
      */
     public static function getInstance(string $name): TrimmerContractInterface;

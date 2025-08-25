@@ -10,8 +10,7 @@ namespace Boatrace\Ninja\Trimmer;
 final class TrimmerResponse implements TrimmerResponseInterface
 {
     /**
-     * @param  string|null  $value
-     * @return void
+     * @param string|null  $value
      */
     public function __construct(private readonly ?string $value = null)
     {

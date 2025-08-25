@@ -12,8 +12,7 @@ use LogicException;
 final class Trimmer implements TrimmerInterface
 {
     /**
-     * @param  \Boatrace\Ninja\Trimmer\TrimmerCoreInterface  $trimmer
-     * @return void
+     * @param \Boatrace\Ninja\Trimmer\TrimmerCoreInterface  $trimmer
      */
     public function __construct(private readonly TrimmerCoreInterface $trimmer)
     {
@@ -21,10 +20,9 @@ final class Trimmer implements TrimmerInterface
     }
 
     /**
-     * @param  string                   $name
-     * @param  array<int, string|null>  $arguments
+     * @param  non-empty-string   $name
+     * @param  array<int, mixed>  $arguments
      * @return \Boatrace\Ninja\Trimmer\TrimmerResponseInterface
-     *
      * @throws \LogicException
      */
     public function __call(string $name, array $arguments): TrimmerResponseInterface
@@ -41,10 +39,9 @@ final class Trimmer implements TrimmerInterface
     }
 
     /**
-     * @param  string                   $name
-     * @param  array<int, string|null>  $arguments
+     * @param  non-empty-string   $name
+     * @param  array<int, mixed>  $arguments
      * @return \Boatrace\Ninja\Trimmer\TrimmerResponseInterface
-     *
      * @throws \LogicException
      */
     public static function __callStatic(string $name, array $arguments): TrimmerResponseInterface

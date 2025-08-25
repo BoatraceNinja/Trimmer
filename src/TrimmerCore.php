@@ -12,15 +12,14 @@ use BadMethodCallException;
 final class TrimmerCore implements TrimmerCoreInterface
 {
     /**
-     * @var string
+     * @var non-empty-string
      */
     private string $characters = "\x00\x09\x0A\x0B\x0D\x20";
 
     /**
-     * @param  string             $name
+     * @param  non-empty-string   $name
      * @param  array<int, mixed>  $arguments
      * @return never
-     *
      * @throws \BadMethodCallException
      */
     public function __call(string $name, array $arguments): never
