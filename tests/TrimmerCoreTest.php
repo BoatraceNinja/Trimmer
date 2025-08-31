@@ -15,11 +15,15 @@ use PHPUnit\Framework\TestCase;
 final class TrimmerCoreTest extends TestCase
 {
     /**
+     * @psalm-var \Boatrace\Ninja\Trimmer\TrimmerCore
+     *
      * @var \Boatrace\Ninja\Trimmer\TrimmerCore
      */
     protected TrimmerCore $trimmer;
 
     /**
+     * @psalm-return void
+     *
      * @return void
      */
     protected function setUp(): void
@@ -28,8 +32,12 @@ final class TrimmerCoreTest extends TestCase
     }
 
     /**
-     * @param  array<int, string>  $arguments
-     * @param  string              $expected
+     * @psalm-param array<int, string> $arguments
+     * @psalm-param string $expected
+     * @psalm-return void
+     *
+     * @param array $arguments
+     * @param string $expected
      * @return void
      */
     #[DataProviderExternal(TrimmerDataProvider::class, 'trimProvider')]
@@ -39,8 +47,12 @@ final class TrimmerCoreTest extends TestCase
     }
 
     /**
-     * @param  array<int, string>  $arguments
-     * @param  string              $expected
+     * @psalm-param array<int, string> $arguments
+     * @psalm-param string $expected
+     * @psalm-return void
+     *
+     * @param array $arguments
+     * @param string $expected
      * @return void
      */
     #[DataProviderExternal(TrimmerDataProvider::class, 'ltrimProvider')]
@@ -50,8 +62,12 @@ final class TrimmerCoreTest extends TestCase
     }
 
     /**
-     * @param  array<int, string>  $arguments
-     * @param  string              $expected
+     * @psalm-param array<int, string> $arguments
+     * @psalm-param string $expected
+     * @psalm-return void
+     *
+     * @param array $arguments
+     * @param string $expected
      * @return void
      */
     #[DataProviderExternal(TrimmerDataProvider::class, 'rtrimProvider')]
@@ -61,6 +77,8 @@ final class TrimmerCoreTest extends TestCase
     }
 
     /**
+     * @psalm-return void
+     *
      * @return void
      */
     public function testTrimWithNull(): void
@@ -69,6 +87,8 @@ final class TrimmerCoreTest extends TestCase
     }
 
     /**
+     * @psalm-return void
+     *
      * @return void
      */
     public function testLtrimWithNull(): void
@@ -77,6 +97,8 @@ final class TrimmerCoreTest extends TestCase
     }
 
     /**
+     * @psalm-return void
+     *
      * @return void
      */
     public function testRtrimWithNull(): void
@@ -85,6 +107,8 @@ final class TrimmerCoreTest extends TestCase
     }
 
     /**
+     * @psalm-return void
+     *
      * @return void
      */
     public function testThrowsExceptionWhenMethodDoesNotExist(): void

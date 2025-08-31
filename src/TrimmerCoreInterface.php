@@ -10,22 +10,34 @@ namespace Boatrace\Ninja\Trimmer;
 interface TrimmerCoreInterface extends TrimmerContractInterface
 {
     /**
-     * @param  string|null  $value
-     * @param  string|null  $characters
+     * @psalm-param string|null $value
+     * @psalm-param string|null $characters
+     * @psalm-return string|null
+     *
+     * @param string|null $value
+     * @param string|null $characters
      * @return string|null
      */
     public function trim(?string $value, ?string $characters = null): ?string;
 
     /**
-     * @param  string|null  $value
-     * @param  string|null  $characters
+     * @psalm-param string|null $value
+     * @psalm-param string|null $characters
+     * @psalm-return string|null
+     *
+     * @param string|null $value
+     * @param string|null $characters
      * @return string|null
      */
     public function ltrim(?string $value, ?string $characters = null): ?string;
 
     /**
-     * @param  string|null  $value
-     * @param  string|null  $characters
+     * @psalm-param string|null $value
+     * @psalm-param string|null $characters
+     * @psalm-return string|null
+     *
+     * @param string|null $value
+     * @param string|null $characters
      * @return string|null
      */
     public function rtrim(?string $value, ?string $characters = null): ?string;

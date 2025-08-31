@@ -15,8 +15,12 @@ use PHPUnit\Framework\TestCase;
 final class TrimmerTest extends TestCase
 {
     /**
-     * @param  array<int, string>  $arguments
-     * @param  string              $expected
+     * @psalm-param array<int, string> $arguments
+     * @psalm-param string $expected
+     * @psalm-return void
+     *
+     * @param array $arguments
+     * @param string $expected
      * @return void
      */
     #[DataProviderExternal(TrimmerDataProvider::class, 'trimProvider')]
@@ -26,8 +30,12 @@ final class TrimmerTest extends TestCase
     }
 
     /**
-     * @param  array<int, string>  $arguments
-     * @param  string              $expected
+     * @psalm-param array<int, string> $arguments
+     * @psalm-param string $expected
+     * @psalm-return void
+     *
+     * @param array $arguments
+     * @param string $expected
      * @return void
      */
     #[DataProviderExternal(TrimmerDataProvider::class, 'ltrimProvider')]
@@ -37,8 +45,12 @@ final class TrimmerTest extends TestCase
     }
 
     /**
-     * @param  array<int, string>  $arguments
-     * @param  string              $expected
+     * @psalm-param array<int, string> $arguments
+     * @psalm-param string $expected
+     * @psalm-return void
+     *
+     * @param array $arguments
+     * @param string $expected
      * @return void
      */
     #[DataProviderExternal(TrimmerDataProvider::class, 'rtrimProvider')]
@@ -48,6 +60,8 @@ final class TrimmerTest extends TestCase
     }
 
     /**
+     * @psalm-return void
+     *
      * @return void
      */
     public function testTrimWithNull(): void
@@ -56,6 +70,8 @@ final class TrimmerTest extends TestCase
     }
 
     /**
+     * @psalm-return void
+     *
      * @return void
      */
     public function testLtrimWithNull(): void
@@ -64,6 +80,8 @@ final class TrimmerTest extends TestCase
     }
 
     /**
+     * @psalm-return void
+     *
      * @return void
      */
     public function testRtrimWithNull(): void
@@ -72,6 +90,8 @@ final class TrimmerTest extends TestCase
     }
 
     /**
+     * @psalm-return void
+     *
      * @return void
      */
     public function testThrowsExceptionWhenMethodDoesNotExist(): void

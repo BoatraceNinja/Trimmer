@@ -10,7 +10,12 @@ namespace Boatrace\Ninja\Trimmer\Tests;
 final class TrimmerDataProvider
 {
     /**
-     * @return array<int, array{arguments: array<int, string>, expected: string}>
+     * @psalm-return array<int, array{
+     *     arguments: array<int, string>,
+     *     expected: string
+     * }>
+     *
+     * @return array
      */
     public static function trimProvider(): array
     {
@@ -29,7 +34,12 @@ final class TrimmerDataProvider
     }
 
     /**
-     * @return array<int, array{arguments: array<int, string>, expected: string}>
+     * @psalm-return array<int, array{
+     *     arguments: array<int, string>,
+     *     expected: string
+     * }>
+     *
+     * @return array
      */
     public static function ltrimProvider(): array
     {
@@ -48,7 +58,12 @@ final class TrimmerDataProvider
     }
 
     /**
-     * @return array<int, array{arguments: array<int, string>, expected: string}>
+     * @psalm-return array<int, array{
+     *     arguments: array<int, string>,
+     *     expected: string
+     * }>
+     *
+     * @return array
      */
     public static function rtrimProvider(): array
     {

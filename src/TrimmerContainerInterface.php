@@ -12,12 +12,17 @@ use DI\Container;
 interface TrimmerContainerInterface extends TrimmerContractInterface
 {
     /**
-     * @param  non-empty-string  $name
+     * @psalm-param non-empty-string $name
+     * @psalm-return \Boatrace\Ninja\Trimmer\TrimmerContractInterface
+     *
+     * @param string $name
      * @return \Boatrace\Ninja\Trimmer\TrimmerContractInterface
      */
     public static function getInstance(string $name): TrimmerContractInterface;
 
     /**
+     * @psalm-return \DI\Container
+     *
      * @return \DI\Container
      */
     public static function getContainer(): Container;

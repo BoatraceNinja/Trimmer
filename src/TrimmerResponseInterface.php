@@ -10,6 +10,8 @@ namespace Boatrace\Ninja\Trimmer;
 interface TrimmerResponseInterface extends TrimmerContractInterface
 {
     /**
+     * @psalm-return string|null
+     *
      * @return string|null
      */
     public function getValue(): ?string;

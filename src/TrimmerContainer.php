@@ -14,17 +14,24 @@ use RuntimeException;
 final class TrimmerContainer implements TrimmerContainerInterface
 {
     /**
-     * @var array<non-empty-string, \Boatrace\Ninja\Trimmer\TrimmerContractInterface>
+     * @psalm-var array<non-empty-string, \Boatrace\Ninja\Trimmer\TrimmerContractInterface>
+     *
+     * @var array
      */
     private static array $instances;
 
     /**
+     * @psalm-var \DI\Container|null
+     *
      * @var \DI\Container|null
      */
     private static ?Container $container;
 
     /**
-     * @param  non-empty-string  $name
+     * @psalm-param non-empty-string  $name
+     * @psalm-return \Boatrace\Ninja\Trimmer\TrimmerContractInterface
+     *
+     * @param string $name
      * @return \Boatrace\Ninja\Trimmer\TrimmerContractInterface
      * @throws \RuntimeException
      */
@@ -43,6 +50,8 @@ final class TrimmerContainer implements TrimmerContainerInterface
     }
 
     /**
+     * @psalm-return \DI\Container
+     *
      * @return \DI\Container
      */
     #[\Override]

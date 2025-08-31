@@ -12,13 +12,19 @@ use BadMethodCallException;
 final class TrimmerCore implements TrimmerCoreInterface
 {
     /**
-     * @var non-empty-string
+     * @psalm-var non-empty-string
+     *
+     * @var string
      */
     private string $characters = "\x00\x09\x0A\x0B\x0D\x20";
 
     /**
-     * @param  non-empty-string   $name
-     * @param  array<int, mixed>  $arguments
+     * @psalm-param non-empty-string $name
+     * @psalm-param array<int, mixed> $arguments
+     * @psalm-return never
+     *
+     * @param string $name
+     * @param array $arguments
      * @return never
      * @throws \BadMethodCallException
      */
@@ -30,8 +36,12 @@ final class TrimmerCore implements TrimmerCoreInterface
     }
 
     /**
-     * @param  string|null  $value
-     * @param  string|null  $characters
+     * @psalm-param string|null $value
+     * @psalm-param string|null $characters
+     * @psalm-return string|null
+     *
+     * @param string|null $value
+     * @param string|null $characters
      * @return string|null
      */
     #[\Override]
@@ -41,8 +51,12 @@ final class TrimmerCore implements TrimmerCoreInterface
     }
 
     /**
-     * @param  string|null  $value
-     * @param  string|null  $characters
+     * @psalm-param string|null $value
+     * @psalm-param string|null $characters
+     * @psalm-return string|null
+     *
+     * @param string|null $value
+     * @param string|null $characters
      * @return string|null
      */
     #[\Override]
@@ -52,8 +66,12 @@ final class TrimmerCore implements TrimmerCoreInterface
     }
 
     /**
-     * @param  string|null  $value
-     * @param  string|null  $characters
+     * @psalm-param string|null $value
+     * @psalm-param string|null $characters
+     * @psalm-return string|null
+     *
+     * @param string|null $value
+     * @param string|null $characters
      * @return string|null
      */
     #[\Override]
@@ -63,8 +81,12 @@ final class TrimmerCore implements TrimmerCoreInterface
     }
 
     /**
-     * @param  string       $value
-     * @param  string|null  $characters
+     * @psalm-param string $value
+     * @psalm-param string|null $characters
+     * @psalm-return string
+     *
+     * @param string $value
+     * @param string|null $characters
      * @return string
      */
     private function executeTrim(string $value, ?string $characters): string
@@ -73,8 +95,12 @@ final class TrimmerCore implements TrimmerCoreInterface
     }
 
     /**
-     * @param  string       $value
-     * @param  string|null  $characters
+     * @psalm-param string $value
+     * @psalm-param string|null $characters
+     * @psalm-return string
+     *
+     * @param string $value
+     * @param string|null $characters
      * @return string
      */
     private function executeLtrim(string $value, ?string $characters): string
@@ -83,8 +109,12 @@ final class TrimmerCore implements TrimmerCoreInterface
     }
 
     /**
-     * @param  string       $value
-     * @param  string|null  $characters
+     * @psalm-param string $value
+     * @psalm-param string|null $characters
+     * @psalm-return string
+     *
+     * @param string $value
+     * @param string|null $characters
      * @return string
      */
     private function executeRtrim(string $value, ?string $characters): string
