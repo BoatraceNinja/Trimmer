@@ -27,6 +27,7 @@ final class TrimmerCoreTest extends TestCase
      *
      * @return void
      */
+    #[\Override]
     protected function setUp(): void
     {
         $this->trimmer = new TrimmerCore();
