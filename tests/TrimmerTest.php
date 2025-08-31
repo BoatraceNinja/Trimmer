@@ -101,6 +101,7 @@ final class TrimmerTest extends TestCase
             'Call to undefined method \'Boatrace\Ninja\Trimmer\TrimmerCore::ghost()\'.'
         );
 
+        /** @psalm-suppress UndefinedMagicMethod */
         Trimmer::ghost();
     }
 }

@@ -15,6 +15,7 @@ use PHPUnit\Framework\TestCase;
 final class TrimmerCoreTest extends TestCase
 {
     /**
+     * @psalm-suppress PropertyNotSetInConstructor
      * @psalm-var \Boatrace\Ninja\Trimmer\TrimmerCore
      *
      * @var \Boatrace\Ninja\Trimmer\TrimmerCore
@@ -118,6 +119,7 @@ final class TrimmerCoreTest extends TestCase
             'Call to undefined method \'Boatrace\Ninja\Trimmer\TrimmerCore::ghost()\'.'
         );
 
+        /** @psalm-suppress UndefinedMagicMethod */
         $this->trimmer->ghost();
     }
 }
