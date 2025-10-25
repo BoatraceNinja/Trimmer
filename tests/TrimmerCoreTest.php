@@ -34,7 +34,7 @@ final class TrimmerCoreTest extends TestCase
     }
 
     /**
-     * @psalm-param array<int, string> $arguments
+     * @psalm-param non-empty-list<string> $arguments
      * @psalm-param string $expected
      * @psalm-return void
      *
@@ -49,7 +49,7 @@ final class TrimmerCoreTest extends TestCase
     }
 
     /**
-     * @psalm-param array<int, string> $arguments
+     * @psalm-param non-empty-list<string> $arguments
      * @psalm-param string $expected
      * @psalm-return void
      *
@@ -64,7 +64,7 @@ final class TrimmerCoreTest extends TestCase
     }
 
     /**
-     * @psalm-param array<int, string> $arguments
+     * @psalm-param non-empty-list<string> $arguments
      * @psalm-param string $expected
      * @psalm-return void
      *

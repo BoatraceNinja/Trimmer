@@ -28,7 +28,7 @@ final class TrimmerContainer implements TrimmerContainerInterface
     private static ?Container $container;
 
     /**
-     * @psalm-param non-empty-string  $name
+     * @psalm-param non-empty-string $name
      * @psalm-return \Boatrace\Ninja\Trimmer\TrimmerContractInterface
      *
      * @param string $name

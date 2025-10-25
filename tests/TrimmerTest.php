@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
 final class TrimmerTest extends TestCase
 {
     /**
-     * @psalm-param array<int, string> $arguments
+     * @psalm-param non-empty-list<string> $arguments
      * @psalm-param string $expected
      * @psalm-return void
      *
@@ -30,7 +30,7 @@ final class TrimmerTest extends TestCase
     }
 
     /**
-     * @psalm-param array<int, string> $arguments
+     * @psalm-param non-empty-list<string> $arguments
      * @psalm-param string $expected
      * @psalm-return void
      *
@@ -45,7 +45,7 @@ final class TrimmerTest extends TestCase
     }
 
     /**
-     * @psalm-param array<int, string> $arguments
+     * @psalm-param non-empty-list<string> $arguments
      * @psalm-param string $expected
      * @psalm-return void
      *

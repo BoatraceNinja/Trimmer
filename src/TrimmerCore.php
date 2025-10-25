@@ -20,7 +20,7 @@ final class TrimmerCore implements TrimmerCoreInterface
 
     /**
      * @psalm-param non-empty-string $name
-     * @psalm-param array<int, mixed> $arguments
+     * @psalm-param list<mixed> $arguments
      * @psalm-return never
      *
      * @param string $name

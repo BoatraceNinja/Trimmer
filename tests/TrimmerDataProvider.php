@@ -10,8 +10,8 @@ namespace Boatrace\Ninja\Trimmer\Tests;
 final class TrimmerDataProvider
 {
     /**
-     * @psalm-return array<int, array{
-     *     arguments: array<int, string>,
+     * @psalm-return non-empty-list<array{
+     *     arguments: non-empty-list<string>,
      *     expected: string
      * }>
      *
@@ -34,8 +34,8 @@ final class TrimmerDataProvider
     }
 
     /**
-     * @psalm-return array<int, array{
-     *     arguments: array<int, string>,
+     * @psalm-return non-empty-list<array{
+     *     arguments: non-empty-list<string>,
      *     expected: string
      * }>
      *
@@ -58,8 +58,8 @@ final class TrimmerDataProvider
     }
 
     /**
-     * @psalm-return array<int, array{
-     *     arguments: array<int, string>,
+     * @psalm-return non-empty-list<array{
+     *     arguments: non-empty-list<string>,
      *     expected: string
      * }>
      *
