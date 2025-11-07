@@ -36,13 +36,13 @@ final class TrimmerCore implements TrimmerCoreInterface
     }
 
     /**
-     * @psalm-param string|null $value
-     * @psalm-param string|null $characters
-     * @psalm-return string|null
+     * @psalm-param ?string $value
+     * @psalm-param ?string $characters
+     * @psalm-return ?string
      *
-     * @param string|null $value
-     * @param string|null $characters
-     * @return string|null
+     * @param ?string $value
+     * @param ?string $characters
+     * @return ?string
      */
     #[\Override]
     public function trim(?string $value, ?string $characters = null): ?string
@@ -51,13 +51,13 @@ final class TrimmerCore implements TrimmerCoreInterface
     }
 
     /**
-     * @psalm-param string|null $value
-     * @psalm-param string|null $characters
-     * @psalm-return string|null
+     * @psalm-param ?string $value
+     * @psalm-param ?string $characters
+     * @psalm-return ?string
      *
-     * @param string|null $value
-     * @param string|null $characters
-     * @return string|null
+     * @param ?string $value
+     * @param ?string $characters
+     * @return ?string
      */
     #[\Override]
     public function ltrim(?string $value, ?string $characters = null): ?string
@@ -66,13 +66,13 @@ final class TrimmerCore implements TrimmerCoreInterface
     }
 
     /**
-     * @psalm-param string|null $value
-     * @psalm-param string|null $characters
-     * @psalm-return string|null
+     * @psalm-param ?string $value
+     * @psalm-param ?string $characters
+     * @psalm-return ?string
      *
-     * @param string|null $value
-     * @param string|null $characters
-     * @return string|null
+     * @param ?string $value
+     * @param ?string $characters
+     * @return ?string
      */
     #[\Override]
     public function rtrim(?string $value, ?string $characters = null): ?string
@@ -82,11 +82,11 @@ final class TrimmerCore implements TrimmerCoreInterface
 
     /**
      * @psalm-param string $value
-     * @psalm-param string|null $characters
+     * @psalm-param ?string $characters
      * @psalm-return string
      *
      * @param string $value
-     * @param string|null $characters
+     * @param ?string $characters
      * @return string
      */
     private function executeTrim(string $value, ?string $characters): string
@@ -96,11 +96,11 @@ final class TrimmerCore implements TrimmerCoreInterface
 
     /**
      * @psalm-param string $value
-     * @psalm-param string|null $characters
+     * @psalm-param ?string $characters
      * @psalm-return string
      *
      * @param string $value
-     * @param string|null $characters
+     * @param ?string $characters
      * @return string
      */
     private function executeLtrim(string $value, ?string $characters): string
@@ -110,11 +110,11 @@ final class TrimmerCore implements TrimmerCoreInterface
 
     /**
      * @psalm-param string $value
-     * @psalm-param string|null $characters
+     * @psalm-param ?string $characters
      * @psalm-return string
      *
      * @param string $value
-     * @param string|null $characters
+     * @param ?string $characters
      * @return string
      */
     private function executeRtrim(string $value, ?string $characters): string

@@ -21,9 +21,9 @@ final class TrimmerContainer implements TrimmerContainerInterface
     private static array $instances;
 
     /**
-     * @psalm-var \DI\Container|null
+     * @psalm-var ?\DI\Container
      *
-     * @var \DI\Container|null
+     * @var ?\DI\Container
      */
     private static ?Container $container;
 

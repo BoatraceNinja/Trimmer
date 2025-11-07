@@ -10,9 +10,9 @@ namespace Boatrace\Ninja\Trimmer;
 final class TrimmerResponse implements TrimmerResponseInterface
 {
     /**
-     * @psalm-param string|null $value
+     * @psalm-param ?string $value
      *
-     * @param string|null $value
+     * @param ?string $value
      */
     public function __construct(private readonly ?string $value = null)
     {
@@ -20,9 +20,9 @@ final class TrimmerResponse implements TrimmerResponseInterface
     }
 
     /**
-     * @psalm-return string|null
+     * @psalm-return ?string
      *
-     * @return string|null
+     * @return ?string
      */
     #[\Override]
     public function getValue(): ?string

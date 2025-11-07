@@ -10,35 +10,35 @@ namespace Boatrace\Ninja\Trimmer;
 interface TrimmerCoreInterface extends TrimmerContractInterface
 {
     /**
-     * @psalm-param string|null $value
-     * @psalm-param string|null $characters
-     * @psalm-return string|null
+     * @psalm-param ?string $value
+     * @psalm-param ?string $characters
+     * @psalm-return ?string
      *
-     * @param string|null $value
-     * @param string|null $characters
-     * @return string|null
+     * @param ?string $value
+     * @param ?string $characters
+     * @return ?string
      */
     public function trim(?string $value, ?string $characters = null): ?string;
 
     /**
-     * @psalm-param string|null $value
-     * @psalm-param string|null $characters
-     * @psalm-return string|null
+     * @psalm-param ?string $value
+     * @psalm-param ?string $characters
+     * @psalm-return ?string
      *
-     * @param string|null $value
-     * @param string|null $characters
-     * @return string|null
+     * @param ?string $value
+     * @param ?string $characters
+     * @return ?string
      */
     public function ltrim(?string $value, ?string $characters = null): ?string;
 
     /**
-     * @psalm-param string|null $value
-     * @psalm-param string|null $characters
-     * @psalm-return string|null
+     * @psalm-param ?string $value
+     * @psalm-param ?string $characters
+     * @psalm-return ?string
      *
-     * @param string|null $value
-     * @param string|null $characters
-     * @return string|null
+     * @param ?string $value
+     * @param ?string $characters
+     * @return ?string
      */
     public function rtrim(?string $value, ?string $characters = null): ?string;
 }
