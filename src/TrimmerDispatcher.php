@@ -9,7 +9,7 @@ use BadMethodCallException;
 /**
  * @author shimomo
  */
-final class TrimmerCore implements TrimmerCoreInterface
+final class TrimmerDispatcher implements TrimmerDispatcherInterface
 {
     /**
      * @psalm-var non-empty-string

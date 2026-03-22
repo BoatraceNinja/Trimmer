@@ -26,11 +26,11 @@ use LogicException;
 final class Trimmer implements TrimmerInterface
 {
     /**
-     * @psalm-param \Boatrace\Ninja\Trimmer\TrimmerCoreInterface $trimmer
+     * @psalm-param \Boatrace\Ninja\Trimmer\TrimmerDispatcherInterface $trimmer
      *
-     * @param \Boatrace\Ninja\Trimmer\TrimmerCoreInterface $trimmer
+     * @param \Boatrace\Ninja\Trimmer\TrimmerDispatcherInterface $trimmer
      */
-    public function __construct(private readonly TrimmerCoreInterface $trimmer)
+    public function __construct(private readonly TrimmerDispatcherInterface $trimmer)
     {
         //
     }

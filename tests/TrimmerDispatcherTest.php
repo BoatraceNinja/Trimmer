@@ -5,22 +5,22 @@ declare(strict_types=1);
 namespace Boatrace\Ninja\Trimmer\Tests;
 
 use BadMethodCallException;
-use Boatrace\Ninja\Trimmer\TrimmerCore;
+use Boatrace\Ninja\Trimmer\TrimmerDispatcher;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
 use PHPUnit\Framework\TestCase;
 
 /**
  * @author shimomo
  */
-final class TrimmerCoreTest extends TestCase
+final class TrimmerDispatcherTest extends TestCase
 {
     /**
      * @psalm-suppress PropertyNotSetInConstructor
-     * @psalm-var \Boatrace\Ninja\Trimmer\TrimmerCore
+     * @psalm-var \Boatrace\Ninja\Trimmer\TrimmerDispatcher
      *
-     * @var \Boatrace\Ninja\Trimmer\TrimmerCore
+     * @var \Boatrace\Ninja\Trimmer\TrimmerDispatcher
      */
-    protected TrimmerCore $trimmer;
+    protected TrimmerDispatcher $trimmer;
 
     /**
      * @psalm-return void
@@ -30,7 +30,7 @@ final class TrimmerCoreTest extends TestCase
     #[\Override]
     protected function setUp(): void
     {
-        $this->trimmer = new TrimmerCore();
+        $this->trimmer = new TrimmerDispatcher();
     }
 
     /**
@@ -117,7 +117,7 @@ final class TrimmerCoreTest extends TestCase
     {
         $this->expectException(BadMethodCallException::class);
         $this->expectExceptionMessage(
-            'Call to undefined method \'Boatrace\Ninja\Trimmer\TrimmerCore::ghost()\'.'
+            'Call to undefined method \'Boatrace\Ninja\Trimmer\TrimmerDispatcher::ghost()\'.'
         );
 
         /** @psalm-suppress UndefinedMagicMethod */
