@@ -117,7 +117,7 @@ final class TrimmerDispatcherTest extends TestCase
     {
         $this->expectException(BadMethodCallException::class);
         $this->expectExceptionMessage(
-            'Call to undefined method \'Boatrace\Ninja\Trimmer\TrimmerDispatcher::ghost()\'.'
+            'Call to undefined method `Boatrace\Ninja\Trimmer\TrimmerDispatcher::ghost()`.'
         );
 
         /** @psalm-suppress UndefinedMagicMethod */

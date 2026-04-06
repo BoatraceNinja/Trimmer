@@ -31,7 +31,7 @@ final class TrimmerDispatcher implements TrimmerDispatcherInterface
     public function __call(string $name, array $arguments): never
     {
         throw new BadMethodCallException(
-            'Call to undefined method \'' . self::class . '::' . $name . '()\'.'
+            'Call to undefined method `' . self::class . '::' . $name . '()`.'
         );
     }
 
