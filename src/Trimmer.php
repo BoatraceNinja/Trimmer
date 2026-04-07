@@ -52,7 +52,9 @@ final class Trimmer implements TrimmerInterface
         ]);
 
         if (!$response instanceof TrimmerResponseInterface) {
-            throw new LogicException('Invalid response type.');
+            throw new LogicException(
+                sprintf('Expected `%s`, got `%s`.', TrimmerResponseInterface::class, get_debug_type($response))
+            );
         }
 
         return $response;
@@ -73,7 +75,9 @@ final class Trimmer implements TrimmerInterface
         $response = TrimmerContainer::getInstance(TrimmerInterface::class)->$name(...$arguments);
 
         if (!$response instanceof TrimmerResponseInterface) {
-            throw new LogicException('Invalid response type.');
+            throw new LogicException(
+                sprintf('Expected `%s`, got `%s`.', TrimmerResponseInterface::class, get_debug_type($response))
+            );
         }
 
         return $response;

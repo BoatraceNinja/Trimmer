@@ -42,7 +42,7 @@ final class TrimmerContainer implements TrimmerContainerInterface
 
         if (!$instance instanceof TrimmerContractInterface) {
             throw new RuntimeException(
-                'Service \'' . $name . '\' must implement TrimmerContractInterface.'
+                sprintf('Expected `%s`, got `%s`.', TrimmerContractInterface::class, get_debug_type($instance))
             );
         }
 
