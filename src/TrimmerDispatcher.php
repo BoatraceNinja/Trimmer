@@ -47,7 +47,7 @@ final class TrimmerDispatcher implements TrimmerDispatcherInterface
     #[\Override]
     public function trim(?string $value, ?string $characters = null): ?string
     {
-        return $value === null ? null : $this->executeTrim($value, $characters);
+        return $value === null ? null : trim($value, $this->characters . ($characters ?? ''));
     }
 
     /**
@@ -62,7 +62,7 @@ final class TrimmerDispatcher implements TrimmerDispatcherInterface
     #[\Override]
     public function ltrim(?string $value, ?string $characters = null): ?string
     {
-        return $value === null ? null : $this->executeLtrim($value, $characters);
+        return $value === null ? null : ltrim($value, $this->characters . ($characters ?? ''));
     }
 
     /**
@@ -77,48 +77,6 @@ final class TrimmerDispatcher implements TrimmerDispatcherInterface
     #[\Override]
     public function rtrim(?string $value, ?string $characters = null): ?string
     {
-        return $value === null ? null : $this->executeRtrim($value, $characters);
-    }
-
-    /**
-     * @psalm-param string $value
-     * @psalm-param ?string $characters
-     * @psalm-return string
-     *
-     * @param string $value
-     * @param ?string $characters
-     * @return string
-     */
-    private function executeTrim(string $value, ?string $characters): string
-    {
-        return trim($value, $this->characters . ($characters ?? ''));
-    }
-
-    /**
-     * @psalm-param string $value
-     * @psalm-param ?string $characters
-     * @psalm-return string
-     *
-     * @param string $value
-     * @param ?string $characters
-     * @return string
-     */
-    private function executeLtrim(string $value, ?string $characters): string
-    {
-        return ltrim($value, $this->characters . ($characters ?? ''));
-    }
-
-    /**
-     * @psalm-param string $value
-     * @psalm-param ?string $characters
-     * @psalm-return string
-     *
-     * @param string $value
-     * @param ?string $characters
-     * @return string
-     */
-    private function executeRtrim(string $value, ?string $characters): string
-    {
-        return rtrim($value, $this->characters . ($characters ?? ''));
+        return $value === null ? null : rtrim($value, $this->characters . ($characters ?? ''));
     }
 }
