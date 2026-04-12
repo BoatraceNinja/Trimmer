@@ -7,30 +7,30 @@ namespace Boatrace\Ninja\Trimmer;
 use LogicException;
 
 /**
- * @psalm-method static \Boatrace\Ninja\Trimmer\TrimmerResponseInterface
+ * @psalm-method static \Boatrace\Ninja\Trimmer\TrimmerResponseContract
  *     trim(?string $value, ?string $characters = null)
- * @psalm-method static \Boatrace\Ninja\Trimmer\TrimmerResponseInterface
+ * @psalm-method static \Boatrace\Ninja\Trimmer\TrimmerResponseContract
  *     ltrim(?string $value, ?string $characters = null)
- * @psalm-method static \Boatrace\Ninja\Trimmer\TrimmerResponseInterface
+ * @psalm-method static \Boatrace\Ninja\Trimmer\TrimmerResponseContract
  *     rtrim(?string $value, ?string $characters = null)
  *
- * @method static \Boatrace\Ninja\Trimmer\TrimmerResponseInterface
+ * @method static \Boatrace\Ninja\Trimmer\TrimmerResponseContract
  *     trim(?string $value, ?string $characters = null)
- * @method static \Boatrace\Ninja\Trimmer\TrimmerResponseInterface
+ * @method static \Boatrace\Ninja\Trimmer\TrimmerResponseContract
  *     ltrim(?string $value, ?string $characters = null)
- * @method static \Boatrace\Ninja\Trimmer\TrimmerResponseInterface
+ * @method static \Boatrace\Ninja\Trimmer\TrimmerResponseContract
  *     rtrim(?string $value, ?string $characters = null)
  *
  * @author shimomo
  */
-final class Trimmer implements TrimmerInterface
+final class Trimmer implements TrimmerContract
 {
     /**
-     * @psalm-param \Boatrace\Ninja\Trimmer\TrimmerDispatcherInterface $trimmer
+     * @psalm-param \Boatrace\Ninja\Trimmer\TrimmerDispatcherContract $trimmer
      *
-     * @param \Boatrace\Ninja\Trimmer\TrimmerDispatcherInterface $trimmer
+     * @param \Boatrace\Ninja\Trimmer\TrimmerDispatcherContract $trimmer
      */
-    public function __construct(private readonly TrimmerDispatcherInterface $trimmer)
+    public function __construct(private readonly TrimmerDispatcherContract $trimmer)
     {
         //
     }
@@ -38,22 +38,22 @@ final class Trimmer implements TrimmerInterface
     /**
      * @psalm-param non-empty-string $name
      * @psalm-param list<mixed> $arguments
-     * @psalm-return \Boatrace\Ninja\Trimmer\TrimmerResponseInterface
+     * @psalm-return \Boatrace\Ninja\Trimmer\TrimmerResponseContract
      *
      * @param string $name
      * @param array $arguments
-     * @return \Boatrace\Ninja\Trimmer\TrimmerResponseInterface
+     * @return \Boatrace\Ninja\Trimmer\TrimmerResponseContract
      * @throws \LogicException
      */
-    public function __call(string $name, array $arguments): TrimmerResponseInterface
+    public function __call(string $name, array $arguments): TrimmerResponseContract
     {
-        $response = TrimmerContainer::getContainer()->make(TrimmerResponseInterface::class, [
+        $response = TrimmerContainer::getContainer()->make(TrimmerResponseContract::class, [
             'value' => $this->trimmer->$name(...$arguments),
         ]);
 
-        if (!$response instanceof TrimmerResponseInterface) {
+        if (!$response instanceof TrimmerResponseContract) {
             throw new LogicException(
-                sprintf('Expected `%s`, got `%s`.', TrimmerResponseInterface::class, get_debug_type($response))
+                sprintf('Expected `%s`, got `%s`.', TrimmerResponseContract::class, get_debug_type($response))
             );
         }
 
@@ -63,20 +63,20 @@ final class Trimmer implements TrimmerInterface
     /**
      * @psalm-param non-empty-string $name
      * @psalm-param list<mixed> $arguments
-     * @psalm-return \Boatrace\Ninja\Trimmer\TrimmerResponseInterface
+     * @psalm-return \Boatrace\Ninja\Trimmer\TrimmerResponseContract
      *
      * @param string $name
      * @param array $arguments
-     * @return \Boatrace\Ninja\Trimmer\TrimmerResponseInterface
+     * @return \Boatrace\Ninja\Trimmer\TrimmerResponseContract
      * @throws \LogicException
      */
-    public static function __callStatic(string $name, array $arguments): TrimmerResponseInterface
+    public static function __callStatic(string $name, array $arguments): TrimmerResponseContract
     {
-        $response = TrimmerContainer::getInstance(TrimmerInterface::class)->$name(...$arguments);
+        $response = TrimmerContainer::getInstance(TrimmerContract::class)->$name(...$arguments);
 
-        if (!$response instanceof TrimmerResponseInterface) {
+        if (!$response instanceof TrimmerResponseContract) {
             throw new LogicException(
-                sprintf('Expected `%s`, got `%s`.', TrimmerResponseInterface::class, get_debug_type($response))
+                sprintf('Expected `%s`, got `%s`.', TrimmerResponseContract::class, get_debug_type($response))
             );
         }
 

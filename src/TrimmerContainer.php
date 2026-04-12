@@ -11,10 +11,10 @@ use RuntimeException;
 /**
  * @author shimomo
  */
-final class TrimmerContainer implements TrimmerContainerInterface
+final class TrimmerContainer implements TrimmerContainerContract
 {
     /**
-     * @psalm-var array<non-empty-string, \Boatrace\Ninja\Trimmer\TrimmerContractInterface>
+     * @psalm-var array<non-empty-string, \Boatrace\Ninja\Trimmer\TrimmerContract>
      *
      * @var array
      */
@@ -29,20 +29,20 @@ final class TrimmerContainer implements TrimmerContainerInterface
 
     /**
      * @psalm-param non-empty-string $name
-     * @psalm-return \Boatrace\Ninja\Trimmer\TrimmerContractInterface
+     * @psalm-return \Boatrace\Ninja\Trimmer\TrimmerContract
      *
      * @param string $name
-     * @return \Boatrace\Ninja\Trimmer\TrimmerContractInterface
+     * @return \Boatrace\Ninja\Trimmer\TrimmerContract
      * @throws \RuntimeException
      */
     #[\Override]
-    public static function getInstance(string $name): TrimmerContractInterface
+    public static function getInstance(string $name): TrimmerContract
     {
         $instance = self::getContainer()->get($name);
 
-        if (!$instance instanceof TrimmerContractInterface) {
+        if (!$instance instanceof TrimmerContract) {
             throw new RuntimeException(
-                sprintf('Expected `%s`, got `%s`.', TrimmerContractInterface::class, get_debug_type($instance))
+                sprintf('Expected `%s`, got `%s`.', TrimmerContract::class, get_debug_type($instance))
             );
         }
 

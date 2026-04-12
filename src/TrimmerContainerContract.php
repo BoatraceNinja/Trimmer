@@ -9,16 +9,16 @@ use DI\Container;
 /**
  * @author shimomo
  */
-interface TrimmerContainerInterface extends TrimmerContractInterface
+interface TrimmerContainerContract extends TrimmerContract
 {
     /**
      * @psalm-param non-empty-string $name
-     * @psalm-return \Boatrace\Ninja\Trimmer\TrimmerContractInterface
+     * @psalm-return \Boatrace\Ninja\Trimmer\TrimmerContract
      *
      * @param string $name
-     * @return \Boatrace\Ninja\Trimmer\TrimmerContractInterface
+     * @return \Boatrace\Ninja\Trimmer\TrimmerContract
      */
-    public static function getInstance(string $name): TrimmerContractInterface;
+    public static function getInstance(string $name): TrimmerContract;
 
     /**
      * @psalm-return \DI\Container

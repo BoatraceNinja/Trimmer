@@ -7,7 +7,7 @@ namespace Boatrace\Ninja\Trimmer;
 /**
  * @author shimomo
  */
-interface TrimmerDispatcherInterface extends TrimmerContractInterface
+interface TrimmerDispatcherContract extends TrimmerContract
 {
     /**
      * @psalm-param ?string $value

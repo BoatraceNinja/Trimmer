@@ -7,7 +7,7 @@ namespace Boatrace\Ninja\Trimmer;
 /**
  * @author shimomo
  */
-final class TrimmerResponse implements TrimmerResponseInterface
+final class TrimmerResponse implements TrimmerResponseContract
 {
     /**
      * @psalm-param ?string $value
