@@ -7,6 +7,7 @@ namespace Boatrace\Ninja\Trimmer\Tests;
 use BadMethodCallException;
 use Boatrace\Ninja\Trimmer\Trimmer;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -23,6 +24,7 @@ final class TrimmerTest extends TestCase
      * @param string $expected
      * @return void
      */
+    #[Test]
     #[DataProviderExternal(TrimmerDataProvider::class, 'trimProvider')]
     public function testTrim(array $arguments, string $expected): void
     {
@@ -38,6 +40,7 @@ final class TrimmerTest extends TestCase
      * @param string $expected
      * @return void
      */
+    #[Test]
     #[DataProviderExternal(TrimmerDataProvider::class, 'ltrimProvider')]
     public function testLtrim(array $arguments, string $expected): void
     {
@@ -53,6 +56,7 @@ final class TrimmerTest extends TestCase
      * @param string $expected
      * @return void
      */
+    #[Test]
     #[DataProviderExternal(TrimmerDataProvider::class, 'rtrimProvider')]
     public function testRtrim(array $arguments, string $expected): void
     {
@@ -64,6 +68,7 @@ final class TrimmerTest extends TestCase
      *
      * @return void
      */
+    #[Test]
     public function testTrimWithNull(): void
     {
         $this->assertNull(Trimmer::trim(null)->getValue());
@@ -74,6 +79,7 @@ final class TrimmerTest extends TestCase
      *
      * @return void
      */
+    #[Test]
     public function testLtrimWithNull(): void
     {
         $this->assertNull(Trimmer::ltrim(null)->getValue());
@@ -84,6 +90,7 @@ final class TrimmerTest extends TestCase
      *
      * @return void
      */
+    #[Test]
     public function testRtrimWithNull(): void
     {
         $this->assertNull(Trimmer::rtrim(null)->getValue());
@@ -94,6 +101,7 @@ final class TrimmerTest extends TestCase
      *
      * @return void
      */
+    #[Test]
     public function testThrowsExceptionWhenMethodDoesNotExist(): void
     {
         $this->expectException(BadMethodCallException::class);

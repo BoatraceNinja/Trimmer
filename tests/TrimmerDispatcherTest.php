@@ -7,6 +7,7 @@ namespace Boatrace\Ninja\Trimmer\Tests;
 use BadMethodCallException;
 use Boatrace\Ninja\Trimmer\TrimmerDispatcher;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -42,6 +43,7 @@ final class TrimmerDispatcherTest extends TestCase
      * @param string $expected
      * @return void
      */
+    #[Test]
     #[DataProviderExternal(TrimmerDataProvider::class, 'trimProvider')]
     public function testTrim(array $arguments, string $expected): void
     {
@@ -57,6 +59,7 @@ final class TrimmerDispatcherTest extends TestCase
      * @param string $expected
      * @return void
      */
+    #[Test]
     #[DataProviderExternal(TrimmerDataProvider::class, 'ltrimProvider')]
     public function testLtrim(array $arguments, string $expected): void
     {
@@ -72,6 +75,7 @@ final class TrimmerDispatcherTest extends TestCase
      * @param string $expected
      * @return void
      */
+    #[Test]
     #[DataProviderExternal(TrimmerDataProvider::class, 'rtrimProvider')]
     public function testRtrim(array $arguments, string $expected): void
     {
@@ -83,6 +87,7 @@ final class TrimmerDispatcherTest extends TestCase
      *
      * @return void
      */
+    #[Test]
     public function testTrimWithNull(): void
     {
         $this->assertNull($this->trimmer->trim(null));
@@ -93,6 +98,7 @@ final class TrimmerDispatcherTest extends TestCase
      *
      * @return void
      */
+    #[Test]
     public function testLtrimWithNull(): void
     {
         $this->assertNull($this->trimmer->ltrim(null));
@@ -103,6 +109,7 @@ final class TrimmerDispatcherTest extends TestCase
      *
      * @return void
      */
+    #[Test]
     public function testRtrimWithNull(): void
     {
         $this->assertNull($this->trimmer->rtrim(null));
@@ -113,6 +120,7 @@ final class TrimmerDispatcherTest extends TestCase
      *
      * @return void
      */
+    #[Test]
     public function testThrowsExceptionWhenMethodDoesNotExist(): void
     {
         $this->expectException(BadMethodCallException::class);
