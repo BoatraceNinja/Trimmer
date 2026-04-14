@@ -45,7 +45,7 @@ final class TrimmerDispatcherTest extends TestCase
      */
     #[Test]
     #[DataProviderExternal(TrimmerDataProvider::class, 'trimProvider')]
-    public function testTrim(array $arguments, string $expected): void
+    public function trimReturnsTrimmedString(array $arguments, string $expected): void
     {
         $this->assertSame($expected, $this->trimmer->trim(...$arguments));
     }
@@ -61,7 +61,7 @@ final class TrimmerDispatcherTest extends TestCase
      */
     #[Test]
     #[DataProviderExternal(TrimmerDataProvider::class, 'ltrimProvider')]
-    public function testLtrim(array $arguments, string $expected): void
+    public function ltrimReturnsTrimmedString(array $arguments, string $expected): void
     {
         $this->assertSame($expected, $this->trimmer->ltrim(...$arguments));
     }
@@ -77,7 +77,7 @@ final class TrimmerDispatcherTest extends TestCase
      */
     #[Test]
     #[DataProviderExternal(TrimmerDataProvider::class, 'rtrimProvider')]
-    public function testRtrim(array $arguments, string $expected): void
+    public function rtrimReturnsTrimmedString(array $arguments, string $expected): void
     {
         $this->assertSame($expected, $this->trimmer->rtrim(...$arguments));
     }
@@ -88,7 +88,7 @@ final class TrimmerDispatcherTest extends TestCase
      * @return void
      */
     #[Test]
-    public function testTrimWithNull(): void
+    public function trimReturnsNullWhenGivenNull(): void
     {
         $this->assertNull($this->trimmer->trim(null));
     }
@@ -99,7 +99,7 @@ final class TrimmerDispatcherTest extends TestCase
      * @return void
      */
     #[Test]
-    public function testLtrimWithNull(): void
+    public function ltrimReturnsNullWhenGivenNull(): void
     {
         $this->assertNull($this->trimmer->ltrim(null));
     }
@@ -110,7 +110,7 @@ final class TrimmerDispatcherTest extends TestCase
      * @return void
      */
     #[Test]
-    public function testRtrimWithNull(): void
+    public function rtrimReturnsNullWhenGivenNull(): void
     {
         $this->assertNull($this->trimmer->rtrim(null));
     }
@@ -121,7 +121,7 @@ final class TrimmerDispatcherTest extends TestCase
      * @return void
      */
     #[Test]
-    public function testThrowsExceptionWhenMethodDoesNotExist(): void
+    public function throwsBadMethodCallExceptionWhenCallingUndefinedMethod(): void
     {
         $this->expectException(BadMethodCallException::class);
         $this->expectExceptionMessage(
