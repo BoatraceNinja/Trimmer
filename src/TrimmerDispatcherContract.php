@@ -10,10 +10,6 @@ namespace Boatrace\Ninja\Trimmer;
 interface TrimmerDispatcherContract extends TrimmerContract
 {
     /**
-     * @psalm-param ?string $value
-     * @psalm-param ?string $characters
-     * @psalm-return ?string
-     *
      * @param ?string $value
      * @param ?string $characters
      * @return ?string
@@ -21,10 +17,6 @@ interface TrimmerDispatcherContract extends TrimmerContract
     public function trim(?string $value, ?string $characters = null): ?string;
 
     /**
-     * @psalm-param ?string $value
-     * @psalm-param ?string $characters
-     * @psalm-return ?string
-     *
      * @param ?string $value
      * @param ?string $characters
      * @return ?string
@@ -32,10 +24,6 @@ interface TrimmerDispatcherContract extends TrimmerContract
     public function ltrim(?string $value, ?string $characters = null): ?string;
 
     /**
-     * @psalm-param ?string $value
-     * @psalm-param ?string $characters
-     * @psalm-return ?string
-     *
      * @param ?string $value
      * @param ?string $characters
      * @return ?string

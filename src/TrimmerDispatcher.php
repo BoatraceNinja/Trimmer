@@ -12,19 +12,13 @@ use BadMethodCallException;
 final class TrimmerDispatcher implements TrimmerDispatcherContract
 {
     /**
-     * @psalm-var non-empty-string
-     *
-     * @var string
+     * @var non-empty-string
      */
     private string $characters = "\x00\x09\x0A\x0B\x0D\x20";
 
     /**
-     * @psalm-param non-empty-string $name
-     * @psalm-param list<mixed> $arguments
-     * @psalm-return never
-     *
-     * @param string $name
-     * @param array $arguments
+     * @param non-empty-string $name
+     * @param list<mixed> $arguments
      * @return never
      * @throws \BadMethodCallException
      */
@@ -36,10 +30,6 @@ final class TrimmerDispatcher implements TrimmerDispatcherContract
     }
 
     /**
-     * @psalm-param ?string $value
-     * @psalm-param ?string $characters
-     * @psalm-return ?string
-     *
      * @param ?string $value
      * @param ?string $characters
      * @return ?string
@@ -51,10 +41,6 @@ final class TrimmerDispatcher implements TrimmerDispatcherContract
     }
 
     /**
-     * @psalm-param ?string $value
-     * @psalm-param ?string $characters
-     * @psalm-return ?string
-     *
      * @param ?string $value
      * @param ?string $characters
      * @return ?string
@@ -66,10 +52,6 @@ final class TrimmerDispatcher implements TrimmerDispatcherContract
     }
 
     /**
-     * @psalm-param ?string $value
-     * @psalm-param ?string $characters
-     * @psalm-return ?string
-     *
      * @param ?string $value
      * @param ?string $characters
      * @return ?string

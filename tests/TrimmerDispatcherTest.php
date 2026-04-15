@@ -17,15 +17,11 @@ final class TrimmerDispatcherTest extends TestCase
 {
     /**
      * @psalm-suppress PropertyNotSetInConstructor
-     * @psalm-var \Boatrace\Ninja\Trimmer\TrimmerDispatcher
-     *
      * @var \Boatrace\Ninja\Trimmer\TrimmerDispatcher
      */
     protected TrimmerDispatcher $trimmer;
 
     /**
-     * @psalm-return void
-     *
      * @return void
      */
     #[\Override]
@@ -35,11 +31,7 @@ final class TrimmerDispatcherTest extends TestCase
     }
 
     /**
-     * @psalm-param non-empty-list<string> $arguments
-     * @psalm-param string $expected
-     * @psalm-return void
-     *
-     * @param array $arguments
+     * @param non-empty-list<string> $arguments
      * @param string $expected
      * @return void
      */
@@ -51,11 +43,7 @@ final class TrimmerDispatcherTest extends TestCase
     }
 
     /**
-     * @psalm-param non-empty-list<string> $arguments
-     * @psalm-param string $expected
-     * @psalm-return void
-     *
-     * @param array $arguments
+     * @param non-empty-list<string> $arguments
      * @param string $expected
      * @return void
      */
@@ -67,11 +55,7 @@ final class TrimmerDispatcherTest extends TestCase
     }
 
     /**
-     * @psalm-param non-empty-list<string> $arguments
-     * @psalm-param string $expected
-     * @psalm-return void
-     *
-     * @param array $arguments
+     * @param non-empty-list<string> $arguments
      * @param string $expected
      * @return void
      */
@@ -83,8 +67,6 @@ final class TrimmerDispatcherTest extends TestCase
     }
 
     /**
-     * @psalm-return void
-     *
      * @return void
      */
     #[Test]
@@ -94,8 +76,6 @@ final class TrimmerDispatcherTest extends TestCase
     }
 
     /**
-     * @psalm-return void
-     *
      * @return void
      */
     #[Test]
@@ -105,8 +85,6 @@ final class TrimmerDispatcherTest extends TestCase
     }
 
     /**
-     * @psalm-return void
-     *
      * @return void
      */
     #[Test]
@@ -116,8 +94,6 @@ final class TrimmerDispatcherTest extends TestCase
     }
 
     /**
-     * @psalm-return void
-     *
      * @return void
      */
     #[Test]

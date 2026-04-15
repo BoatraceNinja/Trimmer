@@ -10,12 +10,10 @@ namespace Boatrace\Ninja\Trimmer\Tests;
 final class TrimmerDataProvider
 {
     /**
-     * @psalm-return non-empty-list<array{
+     * @return non-empty-list<array{
      *     arguments: non-empty-list<string>,
-     *     expected: string
+     *     expected: string,
      * }>
-     *
-     * @return array
      */
     public static function trimProvider(): array
     {
@@ -34,12 +32,10 @@ final class TrimmerDataProvider
     }
 
     /**
-     * @psalm-return non-empty-list<array{
+     * @return non-empty-list<array{
      *     arguments: non-empty-list<string>,
-     *     expected: string
+     *     expected: string,
      * }>
-     *
-     * @return array
      */
     public static function ltrimProvider(): array
     {
@@ -58,12 +54,10 @@ final class TrimmerDataProvider
     }
 
     /**
-     * @psalm-return non-empty-list<array{
+     * @return non-empty-list<array{
      *     arguments: non-empty-list<string>,
-     *     expected: string
+     *     expected: string,
      * }>
-     *
-     * @return array
      */
     public static function rtrimProvider(): array
     {

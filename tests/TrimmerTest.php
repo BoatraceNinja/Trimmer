@@ -16,11 +16,7 @@ use PHPUnit\Framework\TestCase;
 final class TrimmerTest extends TestCase
 {
     /**
-     * @psalm-param non-empty-list<string> $arguments
-     * @psalm-param string $expected
-     * @psalm-return void
-     *
-     * @param array $arguments
+     * @param non-empty-list<string> $arguments
      * @param string $expected
      * @return void
      */
@@ -32,11 +28,7 @@ final class TrimmerTest extends TestCase
     }
 
     /**
-     * @psalm-param non-empty-list<string> $arguments
-     * @psalm-param string $expected
-     * @psalm-return void
-     *
-     * @param array $arguments
+     * @param non-empty-list<string> $arguments
      * @param string $expected
      * @return void
      */
@@ -48,11 +40,7 @@ final class TrimmerTest extends TestCase
     }
 
     /**
-     * @psalm-param non-empty-list<string> $arguments
-     * @psalm-param string $expected
-     * @psalm-return void
-     *
-     * @param array $arguments
+     * @param non-empty-list<string> $arguments
      * @param string $expected
      * @return void
      */
@@ -64,8 +52,6 @@ final class TrimmerTest extends TestCase
     }
 
     /**
-     * @psalm-return void
-     *
      * @return void
      */
     #[Test]
@@ -75,8 +61,6 @@ final class TrimmerTest extends TestCase
     }
 
     /**
-     * @psalm-return void
-     *
      * @return void
      */
     #[Test]
@@ -86,8 +70,6 @@ final class TrimmerTest extends TestCase
     }
 
     /**
-     * @psalm-return void
-     *
      * @return void
      */
     #[Test]
@@ -97,8 +79,6 @@ final class TrimmerTest extends TestCase
     }
 
     /**
-     * @psalm-return void
-     *
      * @return void
      */
     #[Test]
