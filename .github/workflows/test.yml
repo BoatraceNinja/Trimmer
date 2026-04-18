@@ -20,7 +20,6 @@ jobs:
           - '8.4'
           - '8.5'
         phpunit-version:
-          - '11.1'
           - '12.0'
     steps:
       - name: Setup PHP ${{ matrix.php-version }}
