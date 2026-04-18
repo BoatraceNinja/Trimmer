@@ -21,6 +21,10 @@ jobs:
           - '8.5'
         phpunit-version:
           - '12.5.22'
+          - '13.1.6'
+        exclude:
+          - php-version: '8.3'
+            phpunit-version: '13.1.6'
     steps:
       - name: Setup PHP ${{ matrix.php-version }}
         uses: shivammathur/setup-php@v2
