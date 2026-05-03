@@ -27,7 +27,7 @@ jobs:
           extensions: mbstring, xml
 
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install Dependencies
         run: composer update --no-interaction --no-progress
